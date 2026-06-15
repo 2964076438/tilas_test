@@ -23,7 +23,7 @@ public class ClazzServiceImpl implements ClazzService {
         PageHelper.startPage(clazzDataQueryParm.getPage(), clazzDataQueryParm.getPageSize());
         List<Clazz> list =clazzMapper.pageSelect(clazzDataQueryParm);
         Page<Clazz> page = (Page<Clazz>) list;
-        return new PageResult<Clazz>(page.getTotal(),list);
+        return new PageResult<>(page.getTotal(),list);
     }
     @Override
     public void delete(Integer id) {
