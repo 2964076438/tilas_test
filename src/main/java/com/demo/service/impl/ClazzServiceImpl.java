@@ -18,6 +18,7 @@ import java.util.List;
 public class ClazzServiceImpl implements ClazzService {
     @Autowired
     private ClazzMapper clazzMapper;
+
     @Override
     public PageResult<Clazz> pageSelect(ClazzDataQueryParm clazzDataQueryParm) {
         PageHelper.startPage(clazzDataQueryParm.getPage(), clazzDataQueryParm.getPageSize());
